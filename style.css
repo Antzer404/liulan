@@ -1,0 +1,240 @@
+html {
+    height: 100%;
+}
+
+nav {
+    margin: auto;
+    display: flex;
+    width: 70%;
+    border-radius: 23px;
+    height: 50px;
+    background-color: rgba(0, 60, 117, 0.05);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.3); 
+    color: #fff;
+    justify-content: center;
+    transition: transform .3s, opacity .3s;
+    transform: scale(1);
+    opacity: 1;
+}
+
+body {
+    height: 100%;
+    max-width: 100%;
+    margin: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    font-family: "PingFang SC", "Microsoft Yahei", "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+    cursor: default;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+    display: block;
+}
+
+ul {
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    margin-right: 20px;
+}
+
+@media (max-width: 800px) {
+    ul {
+        display: none;
+    }
+}
+
+@media (min-width: 801px) {
+    ul {
+        display: flex;
+    }
+}
+
+
+img{
+    width: 50px; 
+    height: 50px;
+}
+
+
+
+li {
+    margin: 0 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: 12px;
+    font-size: 90px;
+    color: rgba(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 9;
+}
+
+h2 {
+    font-size: 36px;
+    color: white;
+}
+
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+#p-nav {
+    position: fixed;
+    display: block;
+    width: 100%;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+.fade-in {
+    opacity: 0;
+    filter: blur(5px);
+    transition: 
+    opacity 1.0s cubic-bezier(0.15, 0.28, 0.40, 0.90), 
+    filter 1.0s cubic-bezier(0.15, 0.28, 0.40, 0.90);
+  }
+  
+.fade-in.show {
+    opacity: 1;
+    filter: blur(0);
+  }
+
+.underline {
+    display: inline-block;
+    width: 70px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: rgb(0, 35, 68);
+}
+
+/* 这一段样式灵感来自于https://maorx.cn */
+
+#headline {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    font-size: 0;
+}
+
+#top-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(images/bg.jpg);
+    transition: transform 1.5s, opacity 1s;
+    transform: scale(1.05);
+    opacity: 0;
+}
+
+#top-bg.loaded {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.nav-link {
+    position: relative;
+    cursor: pointer;
+    transition: .25s;
+}
+
+
+.flex-grow-1 {
+    flex-grow: 1;
+  }
+  
+
+/* #about {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) rotateX(0deg) rotateY(0deg);
+    border-radius: 23px;
+    top: 110%;
+    width: 90%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    text-align: center;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    backdrop-filter: blur(15px);
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5));
+    box-shadow: 0 20px 40px 1px rgba(0, 0, 0, 0.12);
+    transform-style: preserve-3d;
+    mask: linear-gradient(30deg, rgba(255, 255, 255, .5), #fff); 
+} */
+
+#about {
+    position: relative;
+    top: 100%;
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.about-text {
+    position: relative;
+    margin-top: 25px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.hide-nav {
+    transform: scale(1.05);
+    opacity: 0;
+}
+
+.hide-nav2 {
+    display: none;
+}
+
+footer {
+    position: relative;
+    top: 100%;
+    width: 100%;
+    padding: 96px 0 96px;
+    text-align: center;
+}
+
+footer div {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    vertical-align: top;
+    padding: 0 10% 15px 10%;
+}
+
+footer a {
+    color: rgb(210, 210, 210);
+    font-size: 14px;
+}
+
+footer h3 {
+    font-size: 1rcm;
+    font-weight: 400;
+    position: relative;
+    color: rgb(255, 255, 255);
+}
